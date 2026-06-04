@@ -25,5 +25,7 @@ elif option == "*":
     result = multiply(n,m)
 elif option == "/":
     result = divide(n,m)
+else:
+    result = "Invalid operation selected."
 
-print(f"The result of {n} + {m} is: {result}")
+print(f"The result of {n} {option} {m} is: {result}")
