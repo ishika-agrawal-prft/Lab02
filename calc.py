@@ -13,19 +13,20 @@ def divide(a,b):
         return "Error: Division by zero is not allowed."
     return a/b
 
-n = int(input("Enter a number: "))
-m = int(input("Enter another number: "))
-option = input("Choose an operation (+, -, *, /): ")
+if __name__ == "__main__":
+    n = int(input("Enter a number: "))
+    m = int(input("Enter another number: "))
+    option = input("Choose an operation (+, -, *, /): ")
 
-if option == "+":
-    result = add(n,m)
-elif option == "-":
-    result = subtract(n,m)
-elif option == "*":
-    result = multiply(n,m)
-elif option == "/":
-    result = divide(n,m)
-else:
-    result = "Invalid operation selected."
+    if option == "+":
+        result = add(n,m)
+    elif option == "-":
+        result = subtract(n,m)
+    elif option == "*":
+        result = multiply(n,m)
+    elif option == "/":
+        result = divide(n,m)
+    else:
+        result = "Invalid operation selected."
 
-print(f"The result of {n} {option} {m} is: {result}")
+    print(f"The result of {n} {option} {m} is: {result}")

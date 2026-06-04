@@ -23,7 +23,7 @@ class TestCalculator(unittest.TestCase):
 
     # Test 5: Does it handle dividing by zero safely?
     def test_divide_by_zero(self):
-        self.assertEqual(divide(10, 0), "Cannot divide by zero")
+        self.assertEqual(divide(10, 0), "Error: Division by zero is not allowed.")
 
 if __name__ == '__main__':
     unittest.main()
