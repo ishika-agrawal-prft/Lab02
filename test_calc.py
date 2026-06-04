@@ -8,18 +8,26 @@ class TestCalculator(unittest.TestCase):
     def test_addition(self):
         self.assertEqual(add(10, 5), 15)
         self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(-76,-4), -80)
 
     # Test 2: Does subtraction work?
     def test_subtraction(self):
         self.assertEqual(subtract(10, 5), 5)
+        self.assertEqual(subtract(0, 0),0)
+        self.assertEqual(subtract(-10, -5), 5)
+        self.assertEqual(subtract(-10, 5), -15)
 
     # Test 3: Does multiplication work?
     def test_multiplication(self):
         self.assertEqual(multiply(10, 5), 50)
+        self.assertEqual(multiply(10, 0), 0)
+        self.assertEqual(multiply(10, -5), -50)
 
     # Test 4: Does division work normally?
     def test_division(self):
         self.assertEqual(divide(10, 2), 5)
+        self.assertEqual(divide(9, 2), 4.5)
 
     # Test 5: Does it handle dividing by zero safely?
     def test_divide_by_zero(self):
